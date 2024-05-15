@@ -37,7 +37,7 @@ geometry:
 
 # - Page Header/Footer ---------------------------------------------------------
 disable-header: true
-footer-left: "Copyright © 2023 Accenture. All rights reserved."
+footer-left: "Copyright © 2024 Accenture. All rights reserved."
 
 # - Titel Page -----------------------------------------------------------------
 titlepage: true
@@ -72,7 +72,7 @@ code-block-font-size: \scriptsize
 
 # - LaTeX config ---------------------------------------------------------------
 header-includes: |
-   \definecolor{purple}{HTML}{A100FF}
+   \definecolor{purple}{HTML}{7500C0}
 
 # - Pandoc Environment ---------------------------------------------------------
 pandoc-latex-environment:
@@ -84,30 +84,29 @@ pandoc-latex-environment:
 
 # - Font settings --------------------------------------------------------------
 # generic font settings
-mainfont: Arial           # Main font
-sansfont: Arial           # Font for headings and toc
+# mainfont: Arial           # Main font
+# sansfont: Arial           # Font for headings and toc
 monofont: Courier New     # Font for listing and codes
 
-# mainfont: Graphik-Regular.ttf
-# mainfontoptions:
-# - Path=doc/fonts/
-# - BoldFont=Graphik-Bold.ttf
-# - ItalicFont=Graphik-Regular Italic.ttf
-# - BoldItalicFont=Graphik-Bold Italic.ttf
+mainfont: Graphik-Regular.ttf
+mainfontoptions:
+- Path=fonts/
+- BoldFont=Graphik-Bold.ttf
+- ItalicFont=Graphik-Regular-Italic.ttf
+- BoldItalicFont=Graphik-Bold-Italic.ttf
   
-# sansfont: Graphik-Regular.ttf
-# sansfontoptions:
-# - Path=doc/fonts/
-# - BoldFont=Graphik-Bold.ttf
-# - ItalicFont=Graphik-Regular Italic.ttf
-# - BoldItalicFont=Graphik-Bold Italic.ttf
-
+sansfont: Graphik-Regular.ttf
+sansfontoptions:
+- Path=fonts/
+- BoldFont=Graphik-Bold.ttf
+- ItalicFont=Graphik-Regular-Italic.ttf
+- BoldItalicFont=Graphik-Bold-Italic.ttf
 
 # - Logo settings --------------------------------------------------------------
 # Local logo
-titlepage-logo: sample/logo.png
+titlepage-logo: images/Acc_Logo_Black_Purple_RGB.png
 # Container based logos
-# logo: /oradba/images/TVDLogo2021blue.eps
-# footer-logo: /oradba/images/TVDLogo2021blue.eps
-# titlepage-logo: /oradba/images/TVDLogo2021white.eps
+# logo:           /trivadis/images/TVDLogo2021blue.eps
+# footer-logo:    /trivadis/images/TVDLogo2021blue.eps
+# titlepage-logo: /trivadis/images/TVDLogo2021white.eps
 # --- EOF ----------------------------------------------------------------------    

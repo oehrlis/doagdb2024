@@ -9,7 +9,7 @@
 # Purpose....: Pandoc build workflow to generate the different documentation
 # Notes......: --
 # Reference..: https://github.com/DavidAnson/markdownlint
-# ----------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 name: Doc Build
 
 on:
