@@ -42,10 +42,10 @@ jobs:
           args: .
 
   # - Build Sample docs --------------------------------------------------------
-  # Job to build the english documentation
+  # Job to build the sample documentation
   build_sample_docs:
     needs: check_docs
-    name: Build english documents
+    name: Build sample documents
     runs-on: ubuntu-latest
     env:
       LANGUAGE: en
@@ -57,7 +57,7 @@ jobs:
           echo "MD_FILES=$(printf '%s ' ${{ env.LANGUAGE }}/?x??-*.md)" >> $GITHUB_ENV
           echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
       # Build PDF using docker images oehrlis/pandoc
-      - name: Build pdf document
+      - name: Build PDF document
         uses: docker://oehrlis/pandoc
         with:
           args: >-
