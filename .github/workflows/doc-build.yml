@@ -64,13 +64,25 @@ jobs:
             --pdf-engine=xelatex 
             --listings
             --metadata-file=sample/metadata.yml
-            --resource-path=images
+            --resource-path=sample
             --filter pandoc-latex-environment
-            --output=sample.pdf sample/sample.md
+            --output=sample/sample.pdf sample/sample.md
+
+      # Build DOCX using docker images oehrlis/pandoc
+      - name: Build DOCX document
+        uses: docker://oehrlis/pandoc
+        with:
+          args: >-
+            --pdf-engine=xelatex 
+            --listings
+            --metadata-file=sample/metadata.yml
+            --resource-path=sample
+            --filter pandoc-latex-environment
+            --output=sample/sample.docx sample/sample.md
 
       - uses: actions/upload-artifact@master
         with:
           name: Generated Documents
-          path: tvd-${{ env.REPOSITORY_NAME }}*
+          path: sample/*
 
 # --- EOF -------------------------------------------------------------------
